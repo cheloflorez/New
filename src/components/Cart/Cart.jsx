@@ -93,7 +93,7 @@ const Cart = ({ greeting }) => {
     else
 
         return (
-            <><h1>CARRITO VACIasdadadO</h1></>
+            <Navigate to="/category/Todos" />
         );
 
 }
