@@ -1,7 +1,7 @@
 import React from 'react';
 import useCartContext from '../../context/CartHelper';
 import Swal from 'sweetalert2'
-import { NavLink } from "react-router-dom";
+import { NavLink , Navigate } from "react-router-dom";
 
 const Cart = ({ greeting }) => {
     document.title = greeting
@@ -93,7 +93,7 @@ const Cart = ({ greeting }) => {
     else
 
         return (
-            <><h1>CARRITO VACIO</h1></>
+            <Navigate to="/category/Todos" />
         );
 
 }
