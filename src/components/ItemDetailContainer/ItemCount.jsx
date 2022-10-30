@@ -3,7 +3,8 @@ import Swal from 'sweetalert2'
 
 const ItemCount = ({ price , onAdd, initial, itemName, stock }) => {
     const [count, setCount] = useState(initial)
-
+    
+    // Handler para agregar cantidad
     const handleAgregar = () => {
         if (count < stock) {
             setCount(count + 1)
@@ -28,12 +29,14 @@ const ItemCount = ({ price , onAdd, initial, itemName, stock }) => {
 
     }
     
+    //Handler para restar cantidad
     const handleRestar = () => {
         if (count > initial) {
             setCount(count - 1)
         }
     }
-
+    
+    // Handler par agregar item al carrito
     const handleOnAdd = () => {
         const Toast = Swal.mixin({
             toast: true,
@@ -52,6 +55,7 @@ const ItemCount = ({ price , onAdd, initial, itemName, stock }) => {
         onAdd(count);
         setCount(initial);
     }
+
     return (
         <>
             <div className="row">

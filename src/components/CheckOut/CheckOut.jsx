@@ -51,7 +51,7 @@ const CheckOut = () => {
     };
 
 
-    // Compruebo STOCK de todos los items y si es correcto crea la orden de comra y descuenta stock en la DB
+    // Compruebo STOCK de todos los items y si es correcto crea la orden de compra y descuenta stock en la DB
 
     const handleBuy = async () => {
         const products = await getAllItems()

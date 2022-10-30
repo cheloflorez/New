@@ -7,6 +7,7 @@ const Cart = ({ greeting }) => {
     document.title = greeting
     const { cart, precioTotal, clearCart, removeFromCart } = useCartContext();
 
+    // Handler para vaciar el carrito
     const handleVaciar = () => {
         const Toast = Swal.mixin({
             toast: true,
@@ -26,6 +27,7 @@ const Cart = ({ greeting }) => {
         clearCart();
     }
 
+    // Handler para eliminar un item
     const handleRemove = (id, title) => {
         const Toast = Swal.mixin({
             toast: true,
@@ -91,7 +93,6 @@ const Cart = ({ greeting }) => {
             </>
         );
     else
-
         return (
             <Navigate to="/category/Todos" />
         );
